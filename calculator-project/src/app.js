@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentInput = '';
 
     function adjustFontSize() {
-        const maxFontSize = 2; // em
-        const minFontSize = 1; // em
-        const maxLength = 10; // maximum number of characters before resizing
+        const maxFontSize = 2;
+        const minFontSize = 1;
+        const maxLength = 10;
 
         if (display.textContent.length > maxLength) {
             const newSize = Math.max(minFontSize, maxFontSize - (display.textContent.length - maxLength) * 0.1);
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(() => {
                     display.textContent = '0';
                     adjustFontSize();
-                }, 2000); // 2 segundos
+                }, 2000);
             } else {
                 if (display.textContent === '0' || display.textContent === 'Conta já utilizada, por favor uma diferente.') {
                     display.textContent = value;
